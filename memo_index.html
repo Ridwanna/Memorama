@@ -1,0 +1,207 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemoRama</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/memo_styles.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <header class="container text-center">
+        <h1>My Daily activities</h1>
+        <p>A daily activities Note</p>
+
+        <input
+          type="text"
+          name="serch"
+          id="search-memo"
+          placeholder="search Memo"
+        />
+        <br />
+        <span id="radio">
+          <label for="by-month">
+            By Month
+            <input
+              type="radio"
+              name="by-month"
+              id="by-month"
+              value="by month"
+            />
+          </label>
+
+          <label for="by title">
+            By Title
+            <input
+              type="radio"
+              name="by-title"
+              id="by-title"
+              value="by title"
+            />
+          </label>
+
+          <label for="by-filter">
+            By Filter
+            <input
+              type="radio"
+              name="by-filter"
+              id="by-filter"
+              value="by-filter"
+            />
+          </label>
+        </span>
+      </header>
+
+      <section class="container">
+        <article class="row">
+          <div class="col-md-8">
+            <div class="activities">
+              <h2>Activities</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sort-activities">
+              <h5>Sort By</h5>
+              <span> </span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="container">
+        <article class="row activities-main">
+          <div class="card col-md-12 ml-5 mr-5">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="card-foot ml-5">
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+                <i id="date-created">Date Created: </i>
+                <i id="date-modified">Date Modified: </i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-12 ml-5 mr-5">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="card-foot ml-5">
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+                <i id="date-created">Date Created: </i>
+                <i id="date-modified">Date Modified: </i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-12 ml-5 mr-5">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="card-foot ml-5">
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+                <i id="date-created">Date Created: </i>
+                <i id="date-modified">Date Modified: </i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-12 ml-5 mr-5">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="card-foot ml-5">
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+                <i id="date-created">Date Created: </i>
+                <i id="date-modified">Date Modified: </i>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="container">
+        <article class="row">
+          <div class="add-new-activity">
+            <form action="/">
+                <input type="text" id="activity-topic" placeholder="Activity Topic" name="activity-topic" />
+              <br />
+
+              <textarea
+                class="w-100"
+                name="activity-note"
+                id="activity-note"
+                cols="30"
+                rows="10"
+                placeholder="Activity Note"
+              ></textarea>
+              <div class="action-btn">
+                <input type="submit" value="Add Activity" />
+                <input type="reset" value="Discard Note" />
+              </div>
+            </form>
+          </div>
+        </article>
+      </section>
+
+      <section class="container">
+        <article class="row">
+          <div id="tabbed-content">
+            <ul class="tabs">
+              <li data-target="#about" class="active">About</li>
+              <li data-target="#contact">Contact</li>
+            </ul>
+
+            <div class="panel active" id="about">
+              <p>Content for about tab.....</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempora, rerum similique eligendi distinctio facere animi eaque
+                quaerat magnam, esse corporis quis fugiat eius facilis veritatis
+                ducimus aliquam optio quibusdam veniam?
+              </p>
+            </div>
+            <div class="panel" id="contact">
+              <p>Content for contact tab.....</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempora, rerum similique eligendi distinctio facere animi eaque
+                quaerat magnam, esse corporis quis fugiat eius facilis veritatis
+                ducimus aliquam optio quibusdam veniam?
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/memo_app.js"></script>
+  </body>
+</html>
