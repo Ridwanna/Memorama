@@ -4,6 +4,11 @@ body {
     letter-spacing: 1px;
   }
 
+  h1,
+h2 {
+  font-weight: normal;
+}
+
   .wrapper {
     width: 90%;
     max-width: 960px;
@@ -20,8 +25,28 @@ body {
   header{
     background-color: #DCDCDC;
     width: 90%;
-    margin: 0 5%;
+    margin: 0 5% 2em 0;
     padding: 3em;
+  }
+
+.page-banner input {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
+  }
+
+  .activity-tab{
+    padding: 8px;
+  }
+
+  .activities, .sort-activities {
+    margin-left: 3rem;
   }
 
   .activities-main {
@@ -39,20 +64,19 @@ body {
   }
 
   .add-new-activity {
-    width: 90%;
-    margin: 10px 4rem;
-    margin: 20px auto;
-    border-radius: 10px;
+    width: 100%;
+    margin: 30px auto 0 auto;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     padding: 0 0 20px;
     overflow: hidden;
     border: 1px solid lightgray;
-    background-color: #e6e6e6;
+    background-color: #F5F5F5;
   }
 
   form {
-    padding: 40px;
+    /* padding: 40px; */
+    margin: 3rem;
   }
 
   .add-new-activity input[type="text"] {
