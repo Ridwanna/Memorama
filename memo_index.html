@@ -5,56 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MemoRama</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/memo_styles.css" />
   </head>
   <body>
     <main class="wrapper">
       <header class="container page-banner text-center">
-        <h1>My Daily activities</h1>
+        <h1>Daily activities</h1>
         <p>daily activities Note</p>
 
         <input
+          id="search-box"
           type="text"
           name="serch"
           id="search-memo"
-          placeholder="search Memo"
+          placeholder="search activity..."
         />
-        <br />
-        <span id="radio">
-          <label for="by-month">
-            By Month
-            <input
-              type="radio"
-              name="by-month"
-              id="by-month"
-              value="by month"
-            />
-          </label>
-
-          <label for="by title">
-            By Title
-            <input
-              type="radio"
-              name="by-title"
-              id="by-title"
-              value="by title"
-            />
-          </label>
-
-          <label for="by-filter">
-            By Filter
-            <input
-              type="radio"
-              name="by-filter"
-              id="by-filter"
-              value="by-filter"
-            />
-          </label>
-        </span>
       </header>
 
-      <section class="container">
+      <section class="container ">
         <div class="activity-tab">
           <article class="row">
             <div class="col-md-8">
@@ -62,37 +32,24 @@
                 <h2>Activities</h2>
               </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <div class="sort-activities">
                 <h5>Sort By</h5>
                 <span> </span>
               </div>
-            </div>
+            </div> -->
           </article>
         </div>
       </section>
 
-      <section class="container">
+      <section class="container mobile-container">
         <article class="row main-activities">
           <div class="all-notes">
+
             <ul>
-              <li>
-                <h4 id="topic">The tOPIC</h4>
-                <span class="note">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  odit eligendi delectus tempora. Odio beatae quod tempore
-                  sapiente laboriosam pariatur assumenda, obcaecati, officia
-                  impedit placeat quae. Dicta itaque asperiores corporis. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                  ratione? Est consectetur quam incidunt delectus recusandae ab
-                  rem reprehenderit dignissimos aliquid ratione saepe error,
-                  fugiat officiis corrupti inventore cupiditate enim!
-                </span>
-                <span class="edit"> edit </span>
-                <span class="delete">delete</span>
-              </li>
 
-              <li>
+              <div class="col align-self-center">
+                <li>
                 <h4 id="topic">The tOPIC</h4>
                 <span class="note">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
@@ -104,11 +61,35 @@
                   rem reprehenderit dignissimos aliquid ratione saepe error,
                   fugiat officiis corrupti inventore cupiditate enim!
                 </span>
-                <span class="edit"> edit </span>
+               
+                  <span class="edit"> edit </span>
+                <span class="delete">delete</span>
+                
+              </li>
+              </div>
+
+              <div class="col align-self-center">
+                <li>
+                <h4 id="topic">The tOPIC</h4>
+                <span class="note">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  odit eligendi delectus tempora. Odio beatae quod tempore
+                  sapiente laboriosam pariatur assumenda, obcaecati, officia
+                  impedit placeat quae. Dicta itaque asperiores corporis. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                  ratione? Est consectetur quam incidunt delectus recusandae ab
+                  rem reprehenderit dignissimos aliquid ratione saepe error,
+                  fugiat officiis corrupti inventore cupiditate enim!
+                </span>
+
+                  <span class="edit"> edit </span>
                 <span class="delete"> delete </span>
+          
               </li>
+              </div>
 
-              <li>
+              <div class="col align-self-center">
+                <li>
                 <h4 id="topic">The tOPIC</h4>
                 <span class="note">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
@@ -120,23 +101,35 @@
                   rem reprehenderit dignissimos aliquid ratione saepe error,
                   fugiat officiis corrupti inventore cupiditate enim!
                 </span>
-                <span class="edit">edit</span>
+                
+                  <span class="edit"> edit </span>
                 <span class="delete">delete</span>
+                
               </li>
+              </div>
+
             </ul>
           </div>
         </article>
       </section>
 
-      <section class="container">
+      <!-- <img id="svg-plus" src="circle-plus-solid.svg" alt="solid plus sign"> -->
+
+      <section class="container mobile-container">
         <article class="row">
+          <div class="add-activity-icon text-center">
+            <i id="a-icon" class="fa fa-plus-circle aria-hidden="true"></i>
+            <span id="description">Add New Activity</span>
+          </div>
           <div class="add-new-activity">
+            
             <form id="add-activity" action="/">
               <input
                 type="text"
                 id="activity-topic"
                 placeholder="Activity Topic"
                 name="activity-topic"
+                maxlength="20"
               />
               <br />
 
@@ -147,75 +140,50 @@
                 cols="30"
                 rows="10"
                 placeholder="Activity Note"
+                maxlengthx="120"
               ></textarea>
-              <button type="submit">Add Actvity</button>
-              <button type="reset">Discard Activity</button>
-              <!-- <input type="submit" value="Add Activity" />
-                <input type="reset" value="Discard Note" /> -->
+              <!-- <span class="btn-group-toggle add-new-btn" data-toggle="buttons"> -->
+                <button class="btn btn-info active" type="submit">Add Actvity</button>
+                <button class="btn btn-danger" type="reset">Discard Activity</button>
+              <!-- </span> -->
             </form>
           </div>
         </article>
       </section>
 
-      <section class="container">
+      <section class="container mobile-container">
         <article class="row">
           <div id="nav-panel">
             <ul class="nav-menu">
               <li data-target="#about" class="active">About</li>
               <li data-target="#contact">Contact</li>
             </ul>
-    
+
             <div class="panel active" id="about">
               <p>Content for about tab.....</p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
-                rerum similique eligendi distinctio facere animi eaque quaerat
-                magnam, esse corporis quis fugiat eius facilis veritatis ducimus
-                aliquam optio quibusdam veniam?
-              </p>  
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempora, rerum similique eligendi distinctio facere animi eaque
+                quaerat magnam, esse corporis quis fugiat eius facilis veritatis
+                ducimus aliquam optio quibusdam veniam?
+              </p>
             </div>
             <div class="panel" id="contact">
               <p>Content for contact tab.....</p>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
-                rerum similique eligendi distinctio facere animi eaque quaerat
-                magnam, esse corporis quis fugiat eius facilis veritatis ducimus
-                aliquam optio quibusdam veniam?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempora, rerum similique eligendi distinctio facere animi eaque
+                quaerat magnam, esse corporis quis fugiat eius facilis veritatis
+                ducimus aliquam optio quibusdam veniam?
               </p>
             </div>
           </div>
-          <!-- <div id="nav-panel">
-            <ul class="tabs">
-              <li data-target="#about" class="active">About</li>
-              <li data-target="#contact">Contact</li>
-            </ul>
-
-            <div class="panel active" id="about">
-              <p>Content for about tab.....</p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
-                rerum similique eligendi distinctio facere animi eaque quaerat
-                magnam, esse corporis quis fugiat eius facilis veritatis ducimus
-                aliquam optio quibusdam veniam?
-              </p>
-            </div>
-            <div class="panel" id="contact">
-              <p>Content for contact tab.....</p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
-                rerum similique eligendi distinctio facere animi eaque quaerat
-                magnam, esse corporis quis fugiat eius facilis veritatis ducimus
-                aliquam optio quibusdam veniam?
-              </p>
-            </div>
-
-          </div> -->
         </article>
       </section>
     </main>
 
     <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/bootstrap.bundle.min. js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <!-- <script src="./js/bootstrap.bundle.min.js.map"></script> -->
     <script src="./js/memoApp.js"></script>
   </body>
