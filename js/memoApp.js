@@ -14,6 +14,9 @@ notes.addEventListener('click', (e) => {
     }
 })
 
+// seach activities
+
+
 // edit activity
 const addActivity = document.querySelector('.add-new-activity');
 const editButton = document.querySelector('.edit');
